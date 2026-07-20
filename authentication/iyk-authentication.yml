@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.iyk.app/api-overview
+docs: https://docs.iyk.app/api-quickstart
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    IYK authenticates API requests with a team-scoped API key passed in the
+    x-iyk-api-key request header. The public tap-resolution endpoint
+    GET /chips/find does not require the key. Keys are issued per team from
+    the IYK Studio dashboard.
+schemes:
+- name: iykApiKey
+  type: apiKey
+  in: header
+  parameter: x-iyk-api-key
+  description: >-
+    Team-scoped API key. Required on all Core, Modules, and Self-Service
+    endpoints except the public GET /chips/find validation endpoint.
+  sources: [https://docs.iyk.app/api-core/chips]
+public_endpoints:
+- method: GET
+  path: /chips/find
+  note: Public tap validation from URL parameters; no API key required.
