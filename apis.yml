@@ -1,7 +1,14 @@
 aid: iyk
 name: IYK
-description: IYK is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: IYK provides useful primitives and apps for building digi-physical (phygital)
+  experiences, connecting physical products and merchandise to blockchain tokens, POAPs,
+  and digital content through NFC chips. The IYK API exposes three categories of endpoints
+  - Core (chips, chip groups, items, taps/refs, OTP codes, and phygitals), Modules
+  (POAP Events and Guestbook Events), and Self-Service POAP Devices - letting brands
+  and artists chip physical items, verify authentic taps, gate content and rewards,
+  mint or transfer linked NFTs, and recognize fans who show up. IYK Music applies the
+  same primitives to fan engagement, turning chipped merch and show check-ins into a
+  living fan identity. IYK is backed by a16z.
 url: https://raw.githubusercontent.com/api-evangelist/iyk/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +16,112 @@ x-backed-by:
 - a16z
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/iyk.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- NFC
+- Phygital
+- Blockchain
+- NFT
+- POAP
+- Chips
+- Authentication
+- Fan Engagement
+- Web3
+apis:
+- aid: iyk:iyk-api
+  name: IYK API
+  humanURL: https://docs.iyk.app
+  baseURL: https://api.iyk.app
+  tags:
+  - Chips
+  - Chip Groups
+  - Items
+  - Refs
+  - Taps
+  - OTP
+  - Phygitals
+  - POAP
+  - Events
+  - NFC
+  description: The IYK API provides primitives for building digi-physical experiences.
+    Core endpoints manage chips (NFC tags such as NTAG 424, KONG, and ARX HaLo), chip
+    groups, items, taps/refs (validated physical interactions with replay protection),
+    OTP codes (30-minute one-time passwords for NFT transfers and minting), and phygitals.
+    Module endpoints cover POAP Events and Guestbook Events, and a Self-Service surface
+    manages POAP devices. Authentication is via an x-iyk-api-key request header.
+  properties:
+  - type: DeveloperPortal
+    url: https://docs.iyk.app
+  - type: Documentation
+    url: https://docs.iyk.app/api-overview
+  - type: APIReference
+    url: https://docs.iyk.app/api-core/chips
+  - type: GettingStarted
+    url: https://docs.iyk.app/api-quickstart
+  - type: Authentication
+    url: authentication/iyk-authentication.yml
+  - type: Conventions
+    url: conventions/iyk-conventions.yml
+  - type: MCPServer
+    url: mcp/iyk-mcp.yml
+  - type: DataModel
+    url: data-model/iyk-data-model.yml
+  - type: WellKnown
+    url: well-known/iyk-well-known.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/iyk-domain-security.yml
+- type: Website
+  url: https://iyk.app
+- type: Documentation
+  url: https://docs.iyk.app
+- type: DeveloperPortal
+  url: https://docs.iyk.app
+- type: GettingStarted
+  url: https://docs.iyk.app/api-quickstart
+- type: Support
+  url: https://discord.gg/ezppV2nj7w
+- type: SignUp
+  url: https://studio.iyk.app
+- type: TermsOfService
+  url: https://assets.iyk.app/iyk-terms-of-service.pdf
+- type: PrivacyPolicy
+  url: https://assets.iyk.app/iyk-privacy-policy.pdf
+- type: LLMsTxt
+  url: llms/iyk-llms.txt
+- type: Authentication
+  url: authentication/iyk-authentication.yml
+- type: MCPServer
+  url: mcp/iyk-mcp.yml
+- type: Conventions
+  url: conventions/iyk-conventions.yml
+- type: DataModel
+  url: data-model/iyk-data-model.yml
+- type: WellKnown
+  url: well-known/iyk-well-known.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

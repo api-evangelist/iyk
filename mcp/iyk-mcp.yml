@@ -1,0 +1,75 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: https://docs.iyk.app/api-core/chips
+note: >-
+  IYK does not publish a hosted/remote MCP server. This is a candidate tool
+  list derived from the documented IYK REST API operations (no OpenAPI is
+  published; operations transcribed from the public API reference). Auth is a
+  team-scoped x-iyk-api-key header.
+server:
+  name: iyk
+  transport: http
+  base_url: https://api.iyk.app
+  auth: { type: apiKey, header: x-iyk-api-key }
+tools:
+- name: edit_chip
+  description: Update properties (e.g. redirectUrl) of chips owned by your team.
+  method: PATCH
+  path: /chips
+  source_endpoint: https://docs.iyk.app/api-core/chips
+- name: find_chip
+  description: Resolve a chip UID from tap URL parameters and validate the tap (public).
+  method: GET
+  path: /chips/find
+  source_endpoint: https://docs.iyk.app/api-core/chips
+- name: get_chips_by_group
+  description: List chips associated with a chip group in your workspace.
+  method: GET
+  path: /chips
+  source_endpoint: https://docs.iyk.app/api-core/chips
+- name: get_item
+  description: Retrieve a single item by its id.
+  method: GET
+  path: /items/{itemId}
+  source_endpoint: https://docs.iyk.app/api-core/items
+- name: list_items
+  description: List all items associated with your team.
+  method: GET
+  path: /items
+  source_endpoint: https://docs.iyk.app/api-core/items
+- name: get_item_chips
+  description: Retrieve chips linked to a specific item.
+  method: GET
+  path: /items/{itemId}/chips
+  source_endpoint: https://docs.iyk.app/api-core/items
+- name: get_ref
+  description: Resolve a tap/ref instance (linked NFT, POAP events, replay protection).
+  method: GET
+  path: /refs/{id}
+  source_endpoint: https://docs.iyk.app/api-core/refs
+- name: chip_groups
+  description: Manage chip groups (see chip-groups reference).
+  method: GET
+  path: /chip-groups
+  source_endpoint: https://docs.iyk.app/api-core/chip-groups
+- name: otps
+  description: Work with one-time passwords for NFT transfers and minting.
+  method: GET
+  path: /otps
+  source_endpoint: https://docs.iyk.app/api-core/otps
+- name: phygitals
+  description: Work with phygital objects.
+  method: GET
+  path: /phygitals
+  source_endpoint: https://docs.iyk.app/api-core/phygitals
+- name: poap_events
+  description: Manage POAP Events module resources.
+  method: GET
+  path: /poap-events
+  source_endpoint: https://docs.iyk.app/api-modules/poap-events
+- name: guestbook_events
+  description: Manage Guestbook Events module resources.
+  method: GET
+  path: /events
+  source_endpoint: https://docs.iyk.app/api-modules/events

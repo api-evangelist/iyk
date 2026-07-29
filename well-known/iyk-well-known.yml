@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of IYK hosts
+note: >-
+  Probed the standard /.well-known/ discovery surface on the IYK website, API,
+  and docs hosts. No documents were returned (all 404); recorded as valid
+  negative results. No WellKnown/SecurityTxt pointer is emitted.
+hosts:
+- host: https://api.iyk.app
+  documents:
+  - { path: /.well-known/security.txt, status: 404 }
+  - { path: /.well-known/openid-configuration, status: 404 }
+  - { path: /.well-known/oauth-authorization-server, status: 404 }
+- host: https://iyk.app
+  documents:
+  - { path: /.well-known/security.txt, status: 404 }
+  - { path: /.well-known/openid-configuration, status: 404 }
+  - { path: /.well-known/api-catalog, status: 404 }
+- host: https://docs.iyk.app
+  documents:
+  - { path: /.well-known/security.txt, status: 404 }

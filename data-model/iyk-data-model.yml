@@ -1,0 +1,64 @@
+generated: '2026-07-19'
+method: derived
+source:
+- https://docs.iyk.app/api-core/chips
+- https://docs.iyk.app/api-core/items
+- https://docs.iyk.app/api-core/refs
+note: >-
+  Entity-relationship graph derived from the public IYK API reference (no
+  OpenAPI is published). Relationships inferred from documented id-reference
+  fields and endpoint nesting (e.g. GET /items/:itemId/chips).
+entities:
+- name: Chip
+  description: A physical NFC tag (NTAG 424, KONG, or ARX HaLo) registered to a team.
+  key_fields: [uid, createdAt, isConfigured, redirectUrl, linkedToken]
+  relationships:
+  - belongs_to: ChipGroup
+    via: chipGroupId
+  - belongs_to: Item
+    via: itemId
+  - has_one: LinkedToken
+    via: linkedToken
+- name: ChipGroup
+  description: A named grouping of chips within a workspace.
+  key_fields: [chipGroupId, name]
+  relationships:
+  - has_many: Chip
+    via: chipGroupId
+- name: Item
+  description: A product/collectible with contract, media, and variants.
+  key_fields: [id, name, description, imageUrl, contract, media, variants]
+  relationships:
+  - has_many: Chip
+    via: itemId
+  - has_one: Contract
+    via: contract
+  - has_many: Variant
+    via: variants
+- name: LinkedToken
+  description: The NFT associated with a chip.
+  key_fields: [tokenId, contractAddress, chainId, ownerAddress, metadata]
+  relationships:
+  - belongs_to: Chip
+    via: uid
+- name: Contract
+  description: A blockchain contract reference.
+  key_fields: [address, chainId]
+- name: Ref
+  description: A reference to a tap instance; single-use, replay-protected.
+  key_fields: [uid, isValidRef, linkedToken, poapEvents, otp]
+  relationships:
+  - references: Chip
+    via: uid
+  - has_many: PoapEvent
+    via: poapEvents
+- name: Otp
+  description: One-time password for NFT transfers/minting; 30-minute default TTL.
+  key_fields: [otp, expiresAt]
+- name: Phygital
+  description: A phygital object combining a physical item with a digital token.
+- name: PoapEvent
+  description: A POAP event linked to a chip (Modules).
+  key_fields: [id, poapEventId, otp, status]
+- name: GuestbookEvent
+  description: A Guestbook event (Modules).

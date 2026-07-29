@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.iyk.app/api-overview
+docs:
+- https://docs.iyk.app/api-core/refs
+- https://docs.iyk.app/api-core/otps
+base_url: https://api.iyk.app
+authentication:
+  style: api-key-header
+  header: x-iyk-api-key
+  ref: authentication/iyk-authentication.yml
+idempotency:
+  supported: false
+  notes: No documented idempotency-key header at time of capture.
+one_time_semantics:
+  description: >-
+    Tap/ref resolution is single-use by design. GET /refs/:id returns
+    isValidRef true only on the FIRST query (replay protection); the embedded
+    NFT-transfer otp is likewise returned only on the first query. Similarly
+    GET /chips/find surfaces isValidTap.
+  fields: [isValidRef, isValidTap]
+otp:
+  description: >-
+    OTP codes are one-time passwords used for NFT transfers and minting.
+  ttl: 30 minutes (default)
+pagination:
+  style: unknown
+  notes: Not documented in the public API reference at time of capture.
+error_envelope:
+  format: unknown
+  notes: Error response shape not documented in the public API reference.
+versioning:
+  scheme: unversioned
+  notes: No version prefix in the base URL (https://api.iyk.app); no dated or
+    header-based version scheme documented.
+rate_limiting:
+  documented: false
+cross_links:
+  authentication: authentication/iyk-authentication.yml
+  data_model: data-model/iyk-data-model.yml

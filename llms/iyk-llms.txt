@@ -1,0 +1,35 @@
+# IYK
+
+> IYK provides primitives and apps for building digi-physical (phygital) experiences, connecting physical products and merchandise to blockchain tokens, POAPs, and digital content through NFC chips. The IYK API lets brands and artists chip physical items, verify authentic taps, gate content and rewards, and mint or transfer linked NFTs. Backed by a16z.
+
+## API
+- [IYK API Overview](https://docs.iyk.app/api-overview): Core, Modules, and Self-Service POAP endpoints. Base URL https://api.iyk.app; auth via x-iyk-api-key header.
+- [Quickstart](https://docs.iyk.app/api-quickstart): Step-by-step integration walkthrough.
+
+## Core endpoints
+- [Chips](https://docs.iyk.app/api-core/chips): Register and manage NFC chips (NTAG 424, KONG, ARX HaLo); GET /chips/find validates taps.
+- [Chip Groups](https://docs.iyk.app/api-core/chip-groups): Named groupings of chips within a workspace.
+- [Items](https://docs.iyk.app/api-core/items): Products/collectibles with contract, media, and variants.
+- [Taps / Refs](https://docs.iyk.app/api-core/refs): Single-use, replay-protected tap resolution with linked NFT and POAP data.
+- [OTP Codes](https://docs.iyk.app/api-core/otps): One-time passwords for NFT transfers and minting (30-minute TTL).
+- [Phygitals](https://docs.iyk.app/api-core/phygitals): Phygital objects combining physical items with digital tokens.
+
+## Modules
+- [POAP Events](https://docs.iyk.app/api-modules/poap-events): POAP event integration.
+- [Guestbook Events](https://docs.iyk.app/api-modules/events): Guestbook event integration.
+
+## Self-Service
+- [Self-Service POAP Devices](https://docs.iyk.app/api-self-service): Manage POAP devices and chips.
+
+## Artifacts
+- [Authentication](https://raw.githubusercontent.com/api-evangelist/iyk/refs/heads/main/authentication/iyk-authentication.yml)
+- [Conventions](https://raw.githubusercontent.com/api-evangelist/iyk/refs/heads/main/conventions/iyk-conventions.yml)
+- [Data model](https://raw.githubusercontent.com/api-evangelist/iyk/refs/heads/main/data-model/iyk-data-model.yml)
+- [MCP (candidate)](https://raw.githubusercontent.com/api-evangelist/iyk/refs/heads/main/mcp/iyk-mcp.yml)
+
+## Product
+- [IYK](https://iyk.app): Company site.
+- [IYK Studio](https://studio.iyk.app): Dashboard / sign up.
+- [Discord](https://discord.gg/ezppV2nj7w): Developer support.
+- [Terms of Service](https://assets.iyk.app/iyk-terms-of-service.pdf)
+- [Privacy Policy](https://assets.iyk.app/iyk-privacy-policy.pdf)
