@@ -2,16 +2,16 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: https://docs.iyk.app/api-core/chips
-note: >-
-  IYK does not publish a hosted/remote MCP server. This is a candidate tool
-  list derived from the documented IYK REST API operations (no OpenAPI is
-  published; operations transcribed from the public API reference). Auth is a
-  team-scoped x-iyk-api-key header.
+note: IYK does not publish a hosted/remote MCP server. This is a candidate tool list derived from the
+  documented IYK REST API operations (no OpenAPI is published; operations transcribed from the public
+  API reference). Auth is a team-scoped x-iyk-api-key header.
 server:
   name: iyk
   transport: http
   base_url: https://api.iyk.app
-  auth: { type: apiKey, header: x-iyk-api-key }
+  auth:
+    type: apiKey
+    header: x-iyk-api-key
 tools:
 - name: edit_chip
   description: Update properties (e.g. redirectUrl) of chips owned by your team.
@@ -73,3 +73,9 @@ tools:
   method: GET
   path: /events
   source_endpoint: https://docs.iyk.app/api-modules/events
+deployment:
+  mode: none
+  verified: derived
+  tools: 12
+  checked: '2026-08-12'
+  source: catalog MCP census
