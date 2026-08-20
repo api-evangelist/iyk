@@ -51,6 +51,17 @@ apis:
   tags:
   - Chips
   - Chip Groups
+  - Item
+  - Refs
+  - Taps
+  - OTP
+  - Phygitals
+  - POAP
+  - Event
+  - NFC
+  tags_raw:
+  - Chips
+  - Chip Groups
   - Items
   - Refs
   - Taps
