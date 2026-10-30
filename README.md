@@ -64,6 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-IYK is a company surfaced as a portfolio company of a16z and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+IYK provides useful primitives and apps for building digi-physical (phygital) experiences, connecting physical products and merchandise to blockchain tokens, POAPs, and digital content through NFC chips. The IYK API exposes three categories of endpoints - Core (chips, chip groups, items, taps/refs, OTP codes, and phygitals), Modules (POAP Events and Guestbook Events), and Self-Service POAP Devices - letting brands and artists chip physical items, verify authentic taps, gate content and rewards, mint or transfer linked NFTs, and recognize fans who show up. IYK Music applies the same primitives to fan engagement, turning chipped merch and show check-ins into a living fan identity. IYK is backed by a16z.
 
-Backed by: a16z
+**Areas:** Company · NFC · Phygital · Blockchain · NFT · POAP · Chips · Authentication · Fan Engagement · Web3
+
+## IYK on APIs.io
+
+Everything profiled for IYK is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/iyk/](https://apis.io/providers/iyk/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [IYK API](https://apis.io/apis/iyk/iyk-api/) — The IYK API provides primitives for building digi-physical experiences. Core endpoints manage chips (NFC tags such as NTAG 424, KONG, and ARX HaLo), chip…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [iyk](https://apis.io/servers/iyk/iyk/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Iyk Authentication](https://apis.io/security/iyk/iyk-authentication/)
+- [Iyk Domain Security](https://apis.io/security/iyk/iyk-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://iyk.app)
+- [Documentation](https://docs.iyk.app)
+- [Getting started](https://docs.iyk.app/api-quickstart)
+- [Sign up](https://studio.iyk.app)
+- [Support](https://discord.gg/ezppV2nj7w)
+- [Terms of service](https://assets.iyk.app/iyk-terms-of-service.pdf)
+- [Privacy policy](https://assets.iyk.app/iyk-privacy-policy.pdf)
+
+## API Evangelist rating
+
+**Kin Score 25.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 54.8 |
+| Access clarity | 34.2 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/iyk/](https://apis.io/providers/iyk/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for IYK: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/iyk/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
